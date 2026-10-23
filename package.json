@@ -1,0 +1,37 @@
+{
+  "name": "event-ticket-reservation-system",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"yellow,white\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "nodemon backend/index.js",
+    "server": "nodemon backend/index.js",
+    "frontend": "npm --prefix frontend run dev",
+    "client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "seed": "node backend/db/init.js",
+    "test:concurrency": "node test/concurrency-test.js",
+    "start": "node backend/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "ioredis": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "node-cron": "^4.6.0",
+    "pg": "^8.23.1",
+    "uuid": "^14.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "nodemon": "^3.1.14"
+  }
+}

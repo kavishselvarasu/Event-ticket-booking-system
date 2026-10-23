@@ -1,0 +1,299 @@
+/* ====================================================================
+   ApexTickets - Royal Golden & White Carnival / Party Theme (Strictly NO Gradients)
+   Pure Solid Variations of Gold (#D4AF37, #FFD700, #F5E6BE, #C5A059) and Crisp White
+   ==================================================================== */
+
+:root {
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Solid Luxury Obsidian Base */
+  --bg-darkest: #070708;
+  --bg-primary: #0d0d0f;
+  --bg-surface: #141417;
+  --bg-surface-elevated: #1b1b1f;
+  --bg-surface-card: #1f1f24;
+
+  /* Solid Golden Variants (Strictly Solid, No Gradients) */
+  --gold-pure: #D4AF37;
+  --gold-bright: #FFD700;
+  --gold-champagne: #F5E6BE;
+  --gold-antique: #C5A059;
+  --gold-dark: #996515;
+  --gold-hover: #E5C158;
+  --gold-subtle: rgba(212, 175, 55, 0.12);
+
+  /* Solid White & Ivory Variants */
+  --white-pure: #FFFFFF;
+  --white-ivory: #FDFBF7;
+  --white-muted: #E8E2D5;
+  --white-dim: #A8A295;
+
+  /* Borders & Accents */
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-gold-light: rgba(212, 175, 55, 0.6);
+  --border-gold-subtle: rgba(212, 175, 55, 0.2);
+
+  /* Shadows */
+  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.25);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.8);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --transition: all 0.2s ease-in-out;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-darkest);
+  color: var(--white-pure);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-antique);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-pure);
+}
+
+/* Typography Helpers - Solid Gold & White */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--white-pure);
+  letter-spacing: -0.01em;
+}
+
+.text-gold {
+  color: var(--gold-pure);
+}
+
+.text-gold-bright {
+  color: var(--gold-bright);
+}
+
+.text-gold-champagne {
+  color: var(--gold-champagne);
+}
+
+.text-white {
+  color: var(--white-pure);
+}
+
+.text-muted {
+  color: var(--white-muted);
+}
+
+.text-dim {
+  color: var(--white-dim);
+}
+
+/* Containers (Solid Black / Charcoal with Gold Borders) */
+.glass-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.glass-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  border-color: var(--border-gold-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Solid Buttons (Pure Gold & White - Strictly No Gradients) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.925rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+/* Primary Solid Gold Button */
+.btn-primary {
+  background-color: var(--gold-pure);
+  color: #070708;
+  border: 1px solid var(--gold-bright);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--gold-hover);
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Secondary Charcoal & White Button with Gold Border */
+.btn-secondary {
+  background-color: var(--bg-surface-elevated);
+  color: var(--white-pure);
+  border: 1px solid var(--border-gold);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #26262c;
+  color: var(--gold-champagne);
+  border-color: var(--gold-pure);
+}
+
+/* Gold Outline Button */
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--gold-pure);
+  border: 1px solid var(--gold-pure);
+}
+
+.btn-outline-gold:hover:not(:disabled) {
+  background-color: var(--gold-subtle);
+  color: var(--white-pure);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.825rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Badges (Solid Gold and White variants) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-gold {
+  background-color: var(--gold-subtle);
+  color: var(--gold-bright);
+  border: 1px solid var(--gold-pure);
+}
+
+.badge-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-pure);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.badge-dark {
+  background-color: #101012;
+  color: var(--gold-champagne);
+  border: 1px solid var(--border-gold-subtle);
+}
+
+/* Inputs */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-champagne);
+  margin-bottom: 0.4rem;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--white-pure);
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold-bright);
+  background-color: #1a1a1f;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+/* Party / Carnival Hold Banner (Solid Gold Border & Solid Accents) */
+.hold-banner {
+  background-color: #161512;
+  border: 1px solid var(--gold-pure);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.35rem;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Layout container */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
